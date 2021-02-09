@@ -28,22 +28,6 @@ public class Person { // you can not define private, protected and static class
         this.defaultFinalVariable = defaultFinalVariable;
     }
 
-    public String getPublicFinalVariable() {
-        return publicFinalVariable;
-    }
-
-    public String getPrivateFinalVariable() {
-        return privateFinalVariable;
-    }
-
-    public String getProtectedFinalVariable() {
-        return protectedFinalVariable;
-    }
-
-    public String getDefaultFinalVariable() {
-        return defaultFinalVariable;
-    }
-
     /*// final static variables
     public static final String publicStaticFinalVariable;
     private static final String privateStaticFinalVariable;
