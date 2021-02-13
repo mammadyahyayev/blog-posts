@@ -28,11 +28,11 @@ public class Person { // you can not define private, protected and static class
         this.defaultFinalVariable = defaultFinalVariable;
     }
 
-    /*// final static variables
-    public static final String publicStaticFinalVariable;
-    private static final String privateStaticFinalVariable;
-    protected static final String protectedStaticFinalVariable;
-    static final String defaultStaticFinalVariable;
+    // final static variables
+    public static final String publicStaticFinalVariable = "";
+    private static final String privateStaticFinalVariable = "";
+    protected static final String protectedStaticFinalVariable = "";
+    static final String defaultStaticFinalVariable = "";
 
     // public abstract String variable;  // Variable can not be abstract*/
 
