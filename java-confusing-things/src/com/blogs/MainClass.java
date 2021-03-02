@@ -3,11 +3,15 @@ package com.blogs;
 public class MainClass {
 
     public static void main(String[] args) {
-        Person person1 = new Person("public", "private", "protected", "default");
+        PublicClass person1 = new PublicClass("public", "private", "protected", "default");
         System.out.println(person1);
 
-        Person person2 = new Person("publics", "private", "protected", "default");
+        PublicClass person2 = new PublicClass("publics", "private", "protected", "default");
         person2 = person1;
         System.out.println(person2);
+
+        // you can call static methods with instance of Person class
+        String s = person2.staticMethod();
+        System.out.println(s);
     }
 }
