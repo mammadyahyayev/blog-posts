@@ -51,7 +51,22 @@ print(format(Sys.time(), format="%X")) # prints '12:19:44 AM'
 print(format(Sys.time(), format="%Z")) # prints '+04'
 
 
+# current time in different cities
+print(as.POSIXlt(Sys.time(), "Europe/Berlin"))
 
+print(as.POSIXlt(Sys.time(), "Europe/Paris"))
+
+
+# obtain all time and zones
+
+tab <- file.path(R.home("share"), "zoneinfo", "zone1970.tab")
+if(file.exists(tab)) {
+  cols <- c("code", "coordinates", "TZ", "comments")
+  tmp <- read.delim(file.path(R.home("share"), "zoneinfo", "zone1970.tab"),
+                    header = FALSE, comment.char = "#", col.names = cols)
+  if(interactive()) View(tmp)
+  head(tmp, 10)
+}
 
 
 
