@@ -69,4 +69,25 @@ if(file.exists(tab)) {
 }
 
 
+ymd("03-01-22") # 2003-01-22
+ymd("11-11-21") # 2011-11-21
+ymd("95-12-23") # 1995-12-23
+
+dym() # day year month
+dmy() # day month year 
+mdy() # month day year 
+myd() # month year day   
+ymd() # year month day  
+ydm() # year day month  
+
+
+ydm_h("99-23-12-14") # "1999-12-23 14:00:00 UTC"
+ydm_hm("99-23-12-14-23") # "1999-12-23 14:23:00 UTC"
+ydm_hms("99-23-12-14-23-34") # "1999-12-23 14:23:34 UTC"
+
+
+hm("14:23") # "14H 23M 0S"
+hms("15:33:59") # "15H 33M 59S"
+
+
 
