@@ -90,4 +90,13 @@ hm("14:23") # "14H 23M 0S"
 hms("15:33:59") # "15H 33M 59S"
 
 
+# difference between 2 dates
+date1 <- as.Date("2023-01-21")
+date2 <- as.Date("2023-02-24")
+
+difftime(date2, date1, units = "secs") # 2937600 secs
+difftime(date2, date1, units = "mins") # 48960 mins
+difftime(date2, date1, units = "hours") # 816 hours
+difftime(date2, date1, units = "days") # 34 days
+difftime(date2, date1, units = "weeks") # 4.857143 weeks
 
