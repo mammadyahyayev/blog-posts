@@ -1,6 +1,9 @@
 # Blog Posts
-## Personal Website: https://mammadyahya.com/
-## Medium: https://mamedyahyayev.medium.com/
+## Links
+Personal Website: https://mammadyahya.com/ <br/>
+Medium: https://mamedyahyayev.medium.com/
+
+<hr>
 
 ### Post #1
 What is the main difference between assertTimeout and assertTimeoutPreemptively?
