@@ -47,4 +47,12 @@ Code: https://github.com/mammadyahyayev/blog-posts/blob/master/r-examples/olympi
 
 <hr>
 
+### Post #7
+How to Write Messages With Dynamic Values in Java?
+
+Article: https://mammadyahya.com/messages-with-dynamic-values </br>
+Code: https://github.com/mammadyahyayev/blog-posts/blob/master/java-examples/message-with-dynamic-value/DynamicMessages.java
+
+<hr>
+
 
