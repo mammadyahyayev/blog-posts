@@ -8,8 +8,10 @@
     <artifactId>blogs-posts</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+
     <modules>
         <module>junit-tutorial</module>
+        <module>java-codes</module>
     </modules>
 
     <properties>
