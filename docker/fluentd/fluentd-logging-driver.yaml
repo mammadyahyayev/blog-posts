@@ -1,0 +1,33 @@
+services:
+  nginx:
+    image: nginx
+    container_name: nginx-with-fluentd
+    logging:
+      driver: fluentd
+      options:
+        tag: "{{.ImageName}} | {{.Name}} | {{.ID}}"
+        fluentd-address: localhost:24224
+    networks:
+      - logging-driver
+    depends_on:
+      fluentd:
+        condition: service_healthy
+
+  fluentd:
+    image: fluent/fluentd:edge-debian-amd64
+    container_name: fluentd-log-driver
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    volumes:
+      - ./fluent.conf:/fluentd/etc/fluent.conf
+    networks: 
+      - logging-driver
+    healthcheck:
+      test: ["CMD-SHELL", "exit 0"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+
+networks:
+  logging-driver:
