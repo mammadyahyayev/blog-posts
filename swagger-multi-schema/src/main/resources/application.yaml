@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: swagger-multi-schema
+
+springdoc:
+  api-docs:
+    path: /api/openapi-docs
+    enabled: true
+    groups:
+      enabled: true
+  swagger-ui:
+    enabled: true
+    path: /api/docs
+    disable-swagger-default-url: true
+    config-url: /api/openapi-docs/swagger-config
+    urls:
+      - url: /api/openapi-docs/crm
+        name: crm
+        display-name: CRM REST API Documentation
+
+      - url: /api/openapi-docs/telegram
+        name: telegram
+        display-name: Telegram REST API Documentation
+
+      - url: /api/openapi-docs/instagram
+        name: instagram
+        display-name: Instagram REST API Documentation
+
+      - url: /api/openapi-docs/facebook
+        name: facebook
+        display-name: Facebook REST API Documentation
+
+      - url: /api/openapi-docs/slack
+        name: slack
+        display-name: Slack REST API Documentation
+
+      - url: /api/openapi-docs/whatsapp
+        name: whatsapp
+        display-name: WhatsApp REST API Documentation
