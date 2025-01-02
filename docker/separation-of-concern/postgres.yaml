@@ -1,0 +1,27 @@
+services:
+  postgres-db:
+    image: postgres:14-alpine
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+      PGDATA: /data/postgres
+    secrets:
+      - db_password
+    volumes:
+      - db:/data/postgres
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+
+volumes:
+  db:
+
+secrets:
+  db_password:
+    file: ./secrets/postgres_db_password.txt
