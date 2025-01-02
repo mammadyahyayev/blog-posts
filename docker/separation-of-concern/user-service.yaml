@@ -1,0 +1,36 @@
+services:
+  user-service:
+    image: user-service:v2
+    container_name: user-service
+    ports:
+      - "8080:6467"
+    depends_on:
+      - postgres-db
+    networks:
+      - app-network
+    environment:
+      DB_HOST: postgres-db
+      DB_NAME: postgres
+      DB_PORT: 5432
+      DB_USERNAME: postgres
+      DB_PASSWORD: pass
+    restart: on-failure
+    deploy:
+      replicas: 1
+    healthcheck:
+      test: "curl -f -s http://localhost:6467/actuator/health | grep UP || exit 1"
+      interval: 20s
+      timeout: 10s
+      retries: 1
+      start_period: 30s
+      start_interval: 5
+
+networks:
+  app-network:
+
+volumes:
+  db:
+
+secrets:
+  db_password:
+    file: ./secrets/postgres_db_password.txt
