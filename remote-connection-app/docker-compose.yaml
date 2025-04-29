@@ -1,0 +1,11 @@
+services:
+  remote-connection-app:
+    container_name: remote-connection
+    image: remote-connection
+    deploy:
+      resources:
+        limits:
+          memory: 90M
+        reservations:
+          memory: 40M
+    restart: always
